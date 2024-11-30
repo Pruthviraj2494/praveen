@@ -1,0 +1,15 @@
+.nav-main {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  padding: 8px 18px;
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    .applogo {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.main {
+  background: #000;
+  color: #fff;
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+  .landing-page-main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .custom-slider {
+      .slick-track {
+        height: 70vh !important;
+      }
+      .slide-item {
+        position: relative;
+        .video-desc {
+          position: absolute;
+          z-index: 4;
+          top: 55%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          text-align: center;
+          width: 100vw;
+          .video-dec-head {
+            font-size: 62px;
+          }
+          .video-dec-foot {
+            font-size: 32px;
+          }
+        }
+      }
+      .slick-next {
+        right: 25px;
+        z-index: 2;
+      }
+      .slick-prev {
+        left: 25px;
+        z-index: 2;
+        rotate: 180deg;
+      }
+      .slick-dots {
+        bottom: 12px;
+      }
+      .slick-next:before {
+        content: url("../images/arrow.svg");
+      }
+      .slick-prev:before {
+        content: url("../images/arrow.svg");
+      }
+    }
+    .landing-page-desc {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      padding: 32px 0px;
+      .desc {
+        width: 600px;
+        text-align: center;
+        font-size: 24px;
+      }
+    }
+    .works-one {
+      display: flex;
+      .works-one-left {
+        width: 50vw;
+      }
+      .works-one-right {
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+    }
+    .reels-header {
+      text-align: center;
+      padding: 48px;
+      font-size: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      .reels-desc {
+        font-size: 32px;
+        font-weight: 400;
+      }
+    }
+    .works-reels {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 8px;
+      flex-wrap: wrap;
+      gap: 1%;
+    }
+  }
+}
