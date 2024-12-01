@@ -134,7 +134,7 @@ table {
 }
 
 body {
-  font-family: "Copernicus", serif;
+  font-family: var(--font-geist-sans);
 }
 body::-webkit-scrollbar {
   display: none;

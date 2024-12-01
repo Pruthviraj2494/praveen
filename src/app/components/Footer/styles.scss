@@ -1,0 +1,28 @@
+.footer-main {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  .footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-links {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .social-links-header {
+      color: rgb(133, 133, 133);
+    }
+    a {
+      cursor: pointer;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+    }
+  }
+}
