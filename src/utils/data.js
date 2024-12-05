@@ -1,3 +1,13 @@
+import vicks from "../images/clients/vicks.png";
+import barbeque from "../images/clients/barbeque.png";
+import colors from "../images/clients/colors.png";
+import deepRooted from "../images/clients/deep-rooted.png";
+import hyphen from "../images/clients/hyphen.png";
+import kurlon from "../images/clients/kurlon.png";
+import quantum from "../images/clients/quantum.png";
+import rapido from "../images/clients/rapido.png";
+import rsf from "../images/clients/rsf.png";
+
 export const slideContent1 =
   "https://storage.googleapis.com/praveen_shivanna/Vicks%20LP%204.mp4";
 export const slideContent2 =
@@ -13,10 +23,11 @@ export const slideContent5 =
 
 export const reels1 = [
   {
-    videoUrl: "https://storage.googleapis.com/praveen_shivanna/Simran.mp4",
+    videoUrl:
+      "https://storage.googleapis.com/praveen_shivanna/EAK%20GS%20Web.mp4",
     iframeUrl:
-      "https://drive.google.com/file/d/1q-wJSwh0cPUfrGs_7Hc4HvmM-mOL_nkJ/preview",
-    header: "wellbi",
+      "https://drive.google.com/file/d/1aIirk8ILuwFahOycOvajbs_WiXgEQreO/preview",
+    header: "EKA",
   },
   {
     videoUrl: "https://storage.googleapis.com/praveen_shivanna/Wellbi%201.MP4",
@@ -26,10 +37,10 @@ export const reels1 = [
   },
   {
     videoUrl:
-      "https://storage.googleapis.com/praveen_shivanna/2.Classics%20mix%20.mp4",
+      "https://storage.googleapis.com/praveen_shivanna/Wellbi%20Website.mp4",
     iframeUrl:
-      "https://drive.google.com/file/d/1xzr_vfPMeI9XErwNP8qJt8cVFYdSONRV/preview",
-    header: "wellbi",
+      "https://drive.google.com/file/d/1_1-Ye0j2uDyQk8nNzC6L7zZt6Am6sIgF/preview",
+    header: "Wellbi",
   },
   {
     videoUrl:
@@ -39,11 +50,10 @@ export const reels1 = [
     header: "Brunn",
   },
   {
-    videoUrl:
-      "https://storage.googleapis.com/praveen_shivanna/EAK%20GS%20Web.mp4",
+    videoUrl: "https://storage.googleapis.com/praveen_shivanna/Simran.mp4",
     iframeUrl:
-      "https://drive.google.com/file/d/1aIirk8ILuwFahOycOvajbs_WiXgEQreO/preview",
-    header: "EKA",
+      "https://drive.google.com/file/d/1q-wJSwh0cPUfrGs_7Hc4HvmM-mOL_nkJ/preview",
+    header: "wellbi",
   },
   {
     videoUrl:
@@ -54,10 +64,10 @@ export const reels1 = [
   },
   {
     videoUrl:
-      "https://storage.googleapis.com/praveen_shivanna/Wellbi%20Website.mp4",
+      "https://storage.googleapis.com/praveen_shivanna/2.Classics%20mix%20.mp4",
     iframeUrl:
-      "https://drive.google.com/file/d/1_1-Ye0j2uDyQk8nNzC6L7zZt6Am6sIgF/preview",
-    header: "Wellbi",
+      "https://drive.google.com/file/d/1xzr_vfPMeI9XErwNP8qJt8cVFYdSONRV/preview",
+    header: "wellbi",
   },
   {
     videoUrl: "https://storage.googleapis.com/praveen_shivanna/gopro.mp4",
@@ -68,6 +78,13 @@ export const reels1 = [
 ];
 
 export const sliderItems = [
+  {
+    videoUrl:
+      "https://storage.googleapis.com/praveen_shivanna/eScooter%20Landing%20page.mp4",
+    iframeUrl: "https://www.youtube.com/embed/gxNQ25osbVU",
+    header: "Quantum Energy",
+    footer: "Commercial",
+  },
   {
     videoUrl: slideContent1,
     iframeUrl:
@@ -100,11 +117,43 @@ export const sliderItems = [
     header: "Bellbottom",
     footer: "Film Teaser 2019",
   },
-  // {
-  //   videoUrl:
-  //     "https://storage.googleapis.com/praveen_shivanna/quantum%20energy%2C%20bike%20ad..mp4",
-  //   iframeUrl: "https://www.youtube.com/embed/gxNQ25osbVU",
-  //   header: "Quantum Energy",
-  //   footer: "Commercial",
-  // },
+];
+
+export const clientsSlider = [
+  {
+    client: "vicks",
+    imageUrl: vicks,
+  },
+  {
+    client: "barbeque",
+    imageUrl: barbeque,
+  },
+  {
+    client: "kurlon",
+    imageUrl: kurlon,
+  },
+  {
+    client: "rapido",
+    imageUrl: rapido,
+  },
+  {
+    client: "rsf",
+    imageUrl: rsf,
+  },
+  {
+    client: "colors",
+    imageUrl: colors,
+  },
+  {
+    client: "deepRooted",
+    imageUrl: deepRooted,
+  },
+  {
+    client: "hyphen",
+    imageUrl: hyphen,
+  },
+  {
+    client: "quantum",
+    imageUrl: quantum,
+  },
 ];

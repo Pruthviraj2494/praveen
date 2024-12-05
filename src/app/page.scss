@@ -40,6 +40,7 @@
       .slick-prev {
         left: 25px;
         z-index: 2;
+        top: 45%;
         rotate: 180deg;
       }
       .slick-dots {
@@ -107,5 +108,46 @@
     height: 100%;
     border: none;
     display: block;
+  }
+
+  .client-section {
+    padding: 18rem 0px 8rem 0px;
+    .client-slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 114px 0px 32px 0px;
+
+      .slide-item {
+        position: relative;
+      }
+      .slick-next {
+        right: 25px;
+        z-index: 2;
+      }
+      .slick-prev {
+        left: 25px;
+        z-index: 2;
+        top: 45%;
+        rotate: 180deg;
+      }
+      .slick-dots {
+        bottom: 12px;
+      }
+      .slick-next:before {
+        content: url("../images/arrow.svg");
+      }
+      .slick-prev:before {
+        content: url("../images/arrow.svg");
+      }
+      .slick-slide {
+        transform: translate(100%, 0);
+      }
+    }
+    .client-header {
+      padding: 0px 32px 18px 32px;
+      font-size: 48px;
+      font-size: 800;
+    }
   }
 }

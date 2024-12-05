@@ -1,14 +1,28 @@
 .nav-main {
   position: fixed;
   z-index: 3;
-  width: 100%;
-  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0px 32px;
+  margin-left: auto;
+  background: transparent;
+  width: -webkit-fill-available;
   .nav-left {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: 800;
+    font-weight: 600;
+    font-size: 14px;
     .applogo {
+      cursor: pointer;
+      height: 80px;
+      width: 80px;
+    }
+  }
+  .nav-right {
+    .right-nav-item {
       cursor: pointer;
     }
   }

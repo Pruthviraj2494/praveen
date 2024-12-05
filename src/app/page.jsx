@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useState } from "react";
 import Slider from "react-slick";
 
@@ -8,12 +10,11 @@ import {
   slideContent4,
   slideContent5,
   sliderItems,
+  clientsSlider,
 } from "@/utils/data";
 
-import Navbar from "@/app/components/Navbar";
 import Model from "@/app/components/Model";
 import Footer from "@/app/components/Footer";
-import Loader from "@/app/components/Loader";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -32,12 +33,21 @@ const LandingPage = () => {
     pauseOnHover: false,
   };
 
+  const clientsSettings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 6.6,
+    slidesToScroll: 1,
+    autoplaySpeed: 1000,
+    autoplay: true,
+    pauseOnHover: true,
+  };
+
   return (
     <div className="main">
-      <Navbar />
       <div className="landing-page-main">
         <Slider {...settings} className="custom-slider">
-          {sliderItems.map((videoData, idx) => {
+          {clientsSlider.map((videoData, idx) => {
             return (
               <div
                 className="slide-item"
@@ -75,6 +85,23 @@ const LandingPage = () => {
             collaboration, we’re your partner in shaping unforgettable
             narratives. Let’s make your story live on.
           </div>
+        </div>
+        <div className="client-section">
+          <div className="client-header">Our Clients</div>
+          <Slider {...clientsSettings} className="client-slider">
+            {clientsSlider.map((clientData, idx) => {
+              return (
+                <div className="client-slide-item" key={idx}>
+                  <Image
+                    src={clientData.imageUrl}
+                    alt={clientData.client}
+                    height={200}
+                    width={200}
+                  />
+                </div>
+              );
+            })}
+          </Slider>
         </div>
         <div className="works-one">
           <div className="works-one-left">
@@ -116,8 +143,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="reels-header">
-          <div>Reels</div>
-          <div className="reels-desc">Fashion and Apparel</div>
+          <div>Reels & Shorts</div>
         </div>
         <div className="works-reels">
           {reels1.map((reel, idx) => {
