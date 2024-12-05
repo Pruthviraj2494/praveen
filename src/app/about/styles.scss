@@ -3,6 +3,41 @@
   color: #fff;
   position: relative;
   height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
   color: #fff;
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    height: 100%;
+    .about-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 18px;
+      width: 50vw;
+      padding-left: 64px;
+      .header {
+        font-size: 48px;
+      }
+      .footer {
+        font-size: 24px;
+        width: 40vw;
+      }
+    }
+    .about-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50vw;
+      img {
+        object-fit: cover;
+        height: 70vh;
+        width: -webkit-fill-available;
+        margin-left: auto;
+      }
+    }
+  }
 }

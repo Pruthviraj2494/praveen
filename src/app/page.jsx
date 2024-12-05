@@ -14,7 +14,6 @@ import {
 } from "@/utils/data";
 
 import Model from "@/app/components/Model";
-import Footer from "@/app/components/Footer";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -169,7 +168,6 @@ const LandingPage = () => {
           })}
         </div>
       </div>
-      <Footer />
       {iframeData && (
         <Model
           onClose={() => {
