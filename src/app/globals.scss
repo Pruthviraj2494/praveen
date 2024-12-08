@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -134,7 +135,7 @@ table {
 }
 
 body {
-  font-family: var(--font-geist-sans);
+  font-family: "EB Garamond", serif;
 }
 body::-webkit-scrollbar {
   display: none;

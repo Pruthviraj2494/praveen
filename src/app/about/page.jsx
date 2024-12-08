@@ -2,6 +2,8 @@
 
 import "./styles.scss";
 
+import { useState } from "react";
+
 import Image from "next/image";
 
 import aboutUs from "@/images/aboutUs.png";
@@ -10,9 +12,13 @@ import connect from "@/images/connect.png";
 import award1 from "@/images/awards/award1.png";
 import award2 from "@/images/awards/award2.png";
 
+import Model from "@/app/components/Model";
+
 import { team, reviews } from "@/utils/data";
 
 const About = () => {
+  const [iframeData, setIframeData] = useState(null);
+
   return (
     <div className="about-main">
       <div className="about">
@@ -33,15 +39,6 @@ const About = () => {
           <Image src={aboutUs} alt="aboutUs" height="auto" width="auto" />
         </div>
       </div>
-      {/* <div className="postscript-img-container">
-        <Image
-          src={connect}
-          alt="postscript"
-          height="auto"
-          width="auto"
-          className="postscript-img"
-        />
-      </div> */}
       <div style={{ textAlign: "center", fontSize: "48px", padding: "32px" }}>
         Our team
       </div>
@@ -69,48 +66,83 @@ const About = () => {
           );
         })}
       </div>
-      <div style={{ textAlign: "center", fontSize: "48px", padding: "32px" }}>
-        Awards
-      </div>
-      <div className="award-list">
-        <div className="award">
-          <div className="awards">
-            <div>
-              WASHINGTON.D.C - 2022 <br />
-              Best Narrative Film Award
-              <br />
-              The Echo Short
-              <br />
-              Our Heritage Our Planet Film Week
-              <br />
-            </div>
-            <br />
-            <div className="awards">
-              BENGALURU - 2022 <br />
-              Best Short Film Award
-              <br />
-              The Echo Short
-              <br />
-              Our Earth Award
-              <br />
-            </div>
-          </div>
-
-          <div>
-            <Image src={award2} alt="award1" height={300} width={200} />
-          </div>
+      <div
+        style={{
+          height: "90vh",
+        }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+            fontSize: "48px",
+            padding: "32px 0px 64px 0px",
+          }}
+        >
+          Awards
         </div>
-        <div className="award">
-          <div>
-            BENGALURU - 2022 <br />
-            Best Film Editing Award
-            <br />
-            The AHK Short
-            <br />
-            BIFFS
-            <br />
+        <div className="award-list">
+          <div className="award">
+            <div className="awards">
+              <div>
+                WASHINGTON.D.C - 2022 <br />
+                Best Narrative Film Award
+                <br />
+                The Echo Short
+                <br />
+                Our Heritage Our Planet Film Week
+                <br />
+              </div>
+              <br />
+              <div className="awards">
+                BENGALURU - 2022 <br />
+                Best Short Film Award
+                <br />
+                The Echo Short
+                <br />
+                Our Earth Award
+                <br />
+              </div>
+            </div>
+
+            <div>
+              <Image
+                src={award2}
+                alt="award1"
+                height={600}
+                width={400}
+                onClick={() =>
+                  setIframeData({
+                    iframeUrl: "https://www.youtube.com/embed/Wvjc-Qn_iXU",
+                    header: "Echo",
+                  })
+                }
+              />
+            </div>
           </div>
-          <Image src={award1} alt="award1" height={300} width={200} />
+          <div className="award">
+            <div>
+              BENGALURU - 2022 <br />
+              Best Film Editing Award
+              <br />
+              The AHK Short
+              <br />
+              BIFFS
+              <br />
+            </div>
+            <Image
+              src={award1}
+              alt="award1"
+              height={600}
+              width={400}
+              onClick={() =>
+                setIframeData({
+                  iframeUrl:
+                    "https://www.youtube.com/embed/FxQGvElrX9w?list=PLCKuf9Gq-br2h3Wu24GDdujar8SK90znV",
+                  header: "alegalu",
+                })
+              }
+            />
+          </div>
         </div>
       </div>
       <div style={{ textAlign: "center", fontSize: "48px", padding: "32px" }}>
@@ -136,6 +168,23 @@ const About = () => {
           );
         })}
       </div>
+      {iframeData && (
+        <Model
+          onClose={() => {
+            setIframeData(null);
+          }}
+        >
+          <iframe
+            src={iframeData.iframeUrl}
+            className="iframe"
+            title={iframeData.header}
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </Model>
+      )}
     </div>
   );
 };
