@@ -17,6 +17,7 @@ const About = () => {
     <div className="about-main">
       <div className="about">
         <div className="about-left">
+          <div className="header">About Us</div>
           <div className="footer">
             Postscript is a bold new creative agency launched in 2024 from the
             bustling hubs of Bangalore and Mysore. Combining the cinematic
@@ -32,7 +33,7 @@ const About = () => {
           <Image src={aboutUs} alt="aboutUs" height="auto" width="auto" />
         </div>
       </div>
-      <div className="postscript-img-container">
+      {/* <div className="postscript-img-container">
         <Image
           src={connect}
           alt="postscript"
@@ -40,7 +41,7 @@ const About = () => {
           width="auto"
           className="postscript-img"
         />
-      </div>
+      </div> */}
       <div style={{ textAlign: "center", fontSize: "48px", padding: "32px" }}>
         Our team
       </div>
