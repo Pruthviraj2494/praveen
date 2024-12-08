@@ -33,7 +33,7 @@ const Footer = () => {
           Karnataka - 570017
         </div>
       </div>
-      <div className="social-links">
+      <div className="social-links" style={{ alignItems: "flex-end" }}>
         <div className="social-links-header">Follow us</div>
         <div>
           <a href="https://www.instagram.com/postscript.pixels/">Instagram</a>

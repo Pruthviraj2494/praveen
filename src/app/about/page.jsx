@@ -66,15 +66,11 @@ const About = () => {
           );
         })}
       </div>
-      <div
-        style={{
-          height: "90vh",
-        }}
-      >
+      <div>
         <div
           style={{
             textAlign: "center",
-            fontSize: "48px",
+            fontSize: "32px",
             padding: "32px 0px 64px 0px",
           }}
         >
@@ -108,8 +104,8 @@ const About = () => {
               <Image
                 src={award2}
                 alt="award1"
-                height={600}
-                width={400}
+                height={300}
+                width={200}
                 onClick={() =>
                   setIframeData({
                     iframeUrl: "https://www.youtube.com/embed/Wvjc-Qn_iXU",
@@ -132,8 +128,8 @@ const About = () => {
             <Image
               src={award1}
               alt="award1"
-              height={600}
-              width={400}
+              height={300}
+              width={200}
               onClick={() =>
                 setIframeData({
                   iframeUrl:
@@ -145,7 +141,13 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div style={{ textAlign: "center", fontSize: "48px", padding: "32px" }}>
+      <div
+        style={{
+          textAlign: "center",
+          fontSize: "48px",
+          padding: "82px 0px 32px 0px",
+        }}
+      >
         Actual Customer Reviews
       </div>
       <div className="review-list">
