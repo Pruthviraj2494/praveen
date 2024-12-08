@@ -132,7 +132,7 @@ const LandingPage = () => {
         <div className="mario-videos">
           <div className="mario-videos-sub">
             <video
-              style={{ width: "50vw" }}
+              style={{ width: "48vw" }}
               width="auto"
               height="auto"
               autoPlay
@@ -151,7 +151,7 @@ const LandingPage = () => {
               />
             </video>
             <video
-              style={{ width: "50vw" }}
+              style={{ width: "48vw" }}
               width="auto"
               height="auto"
               autoPlay
@@ -172,7 +172,7 @@ const LandingPage = () => {
           </div>
           <div className="mario-videos-sub">
             <video
-              style={{ width: "50vw" }}
+              style={{ width: "48vw" }}
               width="auto"
               height="auto"
               autoPlay
@@ -191,7 +191,7 @@ const LandingPage = () => {
               />
             </video>
             <video
-              style={{ width: "50vw" }}
+              style={{ width: "48vw" }}
               width="auto"
               height="auto"
               autoPlay

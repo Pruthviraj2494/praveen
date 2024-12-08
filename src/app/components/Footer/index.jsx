@@ -25,9 +25,13 @@ const Footer = () => {
           <div>: +91 8892293393</div>
         </div>
       </div>
+
       <div className="footer-logo-container">
         <Image src={appLogo} alt="appLogo" height={100} width={100} />
-        <div>Post Script</div>
+        <div>
+          #319, 1st Main Rd, Bogadi 2nd stage North, Nirmithi Kendra, Mysuru
+          Karnataka - 570017
+        </div>
       </div>
       <div className="social-links">
         <div className="social-links-header">Follow us</div>

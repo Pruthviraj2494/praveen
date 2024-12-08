@@ -147,7 +147,8 @@
     .client-header {
       padding: 0px 32px 18px 32px;
       font-size: 48px;
-      font-size: 800;
+      text-align: center;
+      font-weight: 800;
     }
   }
   .show-case {
@@ -160,10 +161,12 @@
     flex-direction: column;
     align-items: center;
     gap: 32px;
+
     .mario-videos-sub {
       display: flex;
       align-items: center;
       gap: 32px;
+      overflow: hidden;
     }
   }
 }
