@@ -7,6 +7,9 @@ import Image from "next/image";
 import aboutUs from "@/images/aboutUs.png";
 import connect from "@/images/connect.png";
 
+import award1 from "@/images/awards/award1.png";
+import award2 from "@/images/awards/award2.png";
+
 import { team, reviews } from "@/utils/data";
 
 const About = () => {
@@ -38,7 +41,9 @@ const About = () => {
           className="postscript-img"
         />
       </div>
-      <div style={{ textAlign: "center", fontSize: "48px" }}>Our team</div>
+      <div style={{ textAlign: "center", fontSize: "48px", padding: "32px" }}>
+        Our team
+      </div>
       <div>
         {team.map((member, idx) => {
           return (
@@ -63,8 +68,51 @@ const About = () => {
           );
         })}
       </div>
+      <div style={{ textAlign: "center", fontSize: "48px", padding: "32px" }}>
+        Awards
+      </div>
+      <div className="award-list">
+        <div className="award">
+          <div className="awards">
+            <div>
+              WASHINGTON.D.C - 2022 <br />
+              Best Narrative Film Award
+              <br />
+              The Echo Short
+              <br />
+              Our Heritage Our Planet Film Week
+              <br />
+            </div>
+            <br />
+            <div className="awards">
+              BENGALURU - 2022 <br />
+              Best Short Film Award
+              <br />
+              The Echo Short
+              <br />
+              Our Earth Award
+              <br />
+            </div>
+          </div>
 
-      <div style={{ textAlign: "center", fontSize: "48px" }}>
+          <div>
+            <Image src={award2} alt="award1" height={300} width={200} />
+          </div>
+        </div>
+        <div className="award">
+          <div>
+            BENGALURU - 2022 <br />
+            Best Film Editing Award
+            <br />
+            The AHK Short
+            <br />
+            BIFFS
+            <br />
+          </div>
+          <Image src={award1} alt="award1" height={300} width={200} />
+        </div>
+      </div>
+      <div style={{ textAlign: "center", fontSize: "48px", padding: "32px" }}>
         Actual Customer Reviews
       </div>
       <div className="review-list">

@@ -18,9 +18,6 @@ import Model from "@/app/components/Model";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import award1 from "@/images/awards/award1.png";
-import award2 from "@/images/awards/award2.png";
-
 import "./page.scss";
 import { Fragment } from "react";
 
@@ -127,32 +124,6 @@ const LandingPage = () => {
             </video>
           </div>
         </div>
-        <div className="reels-header">
-          <div>Reels & Shorts</div>
-        </div>
-        <div className="works-reels">
-          {reels1.map((reel, idx) => {
-            return (
-              <Fragment key={idx}>
-                <video
-                  style={{
-                    width: "24%",
-                    paddingTop: "64px",
-                    cursor: "pointer",
-                  }}
-                  width="auto"
-                  height="auto"
-                  autoPlay
-                  muted
-                  loop
-                  onClick={() => setIframeData(reel)}
-                >
-                  <source src={reel.videoUrl} type="video/mp4" />
-                </video>
-              </Fragment>
-            );
-          })}
-        </div>
         <div className="show-case">
           Every brand has a unique story to tell, and we’re here to bring it to
           life. Through innovative ideas and thoughtful execution, we transform
@@ -240,47 +211,33 @@ const LandingPage = () => {
             </video>
           </div>
         </div>
-        <div className="award-list">
-          <div className="award">
-            <div className="awards">
-              <div>
-                WASHINGTON.D.C - 2022 <br />
-                Best Narrative Film Award
-                <br />
-                The Echo Short
-                <br />
-                Our Heritage Our Planet Film Week
-                <br />
-              </div>
-              <br />
-              <div className="awards">
-                BENGALURU - 2022 <br />
-                Best Short Film Award
-                <br />
-                The Echo Short
-                <br />
-                Our Earth Award
-                <br />
-              </div>
-            </div>
-
-            <div>
-              <Image src={award2} alt="award1" height={300} width={200} />
-            </div>
-          </div>
-          <div className="award">
-            <div>
-              BENGALURU - 2022 <br />
-              Best Film Editing Award
-              <br />
-              The AHK Short
-              <br />
-              BIFFS
-              <br />
-            </div>
-            <Image src={award1} alt="award1" height={300} width={200} />
-          </div>
+        <div className="reels-header">
+          <div>Reels & Shorts</div>
         </div>
+        <div className="works-reels">
+          {reels1.map((reel, idx) => {
+            return (
+              <Fragment key={idx}>
+                <video
+                  style={{
+                    width: "24%",
+                    paddingTop: "64px",
+                    cursor: "pointer",
+                  }}
+                  width="auto"
+                  height="auto"
+                  autoPlay
+                  muted
+                  loop
+                  onClick={() => setIframeData(reel)}
+                >
+                  <source src={reel.videoUrl} type="video/mp4" />
+                </video>
+              </Fragment>
+            );
+          })}
+        </div>
+
         <div className="client-section">
           <div className="client-header">Our Clients</div>
           <Slider {...clientsSettings} className="client-slider">
