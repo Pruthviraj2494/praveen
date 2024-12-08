@@ -17,14 +17,22 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    color: #fff;
+
     .social-links-header {
       color: rgb(133, 133, 133);
     }
+
     a {
       cursor: pointer;
       color: #fff;
       border: none;
       text-decoration: none;
     }
+  }
+  .social-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 }

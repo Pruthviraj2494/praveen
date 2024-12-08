@@ -5,15 +5,15 @@ import "./styles.scss";
 import Image from "next/image";
 
 import aboutUs from "@/images/aboutUs.png";
+import connect from "@/images/connect.png";
 
-import { team } from "@/utils/data";
+import { team, reviews } from "@/utils/data";
 
 const About = () => {
   return (
     <div className="about-main">
       <div className="about">
         <div className="about-left">
-          <div className="header">About Us</div>
           <div className="footer">
             Postscript is a bold new creative agency launched in 2024 from the
             bustling hubs of Bangalore and Mysore. Combining the cinematic
@@ -29,12 +29,24 @@ const About = () => {
           <Image src={aboutUs} alt="aboutUs" height="auto" width="auto" />
         </div>
       </div>
-
+      <div className="postscript-img-container">
+        <Image
+          src={connect}
+          alt="postscript"
+          height="auto"
+          width="auto"
+          className="postscript-img"
+        />
+      </div>
       <div style={{ textAlign: "center", fontSize: "48px" }}>Our team</div>
       <div>
         {team.map((member, idx) => {
           return (
-            <div className="about" key={idx}>
+            <div
+              className="about"
+              key={idx}
+              style={idx === 1 ? { flexDirection: "row-reverse" } : {}}
+            >
               <div className="about-left">
                 <div className="header">{member.name}</div>
                 <div className="footer">{member.about}</div>
@@ -47,6 +59,30 @@ const About = () => {
                   width="auto"
                 />
               </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div style={{ textAlign: "center", fontSize: "48px" }}>
+        Actual Customer Reviews
+      </div>
+      <div className="review-list">
+        {reviews.map((member, idx) => {
+          return (
+            <div className="review-main" key={idx}>
+              <div className="review">{member.review}</div>
+              <div className="reviewer-img-container">
+                <div className="hr-divider" />
+                <div>
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    className="client-image"
+                  />
+                </div>
+              </div>
+              <div>{member.name}</div>
             </div>
           );
         })}

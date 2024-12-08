@@ -12,6 +12,10 @@ import praveen from "../images/team/praveen.png";
 import maria from "../images/team/maria.png";
 import ananya from "../images/team/ananya.png";
 
+import nischith from "../images/nischith.png";
+import bindu from "../images/bindu.png";
+import indira from "../images/indira.png";
+
 export const slideContent1 =
   "https://storage.googleapis.com/praveen_shivanna/Vicks%20LP%204.mp4";
 export const slideContent2 =
@@ -182,7 +186,28 @@ export const team = [
     title:
       "Content Writer  |  Content Strategist  | P R  Associate  |  Digital Marketer  ",
     about:
-      "Ananya N Raj is a skilled professional with two years of experience in social media management, content creation, and marketing. She has driven impactful campaigns, including for House of Idaa, a kids' clothing brand, and currently manages social media for Wellbi, a fashion and apparel company. She specializes in scripting, content strategy, and delivering creative, results-driven marketing solutions tailored to brand goals.",
+      "Ananya N Raj brings over two years of experience in social media marketing and business development, with a proven track record of managing impactful campaigns for brands like “Wellbi”, “Idaa” and working on diverse creative projects. Her experience has evolved into expertise in ad creation, content strategy, and audience engagement. Ananya is dedicated to delivering innovative, results-driven solutions that enhance brand visibility and foster growth, making a significant impact in the digital marketing landscape.",
     image: ananya,
+  },
+];
+
+export const reviews = [
+  {
+    name: "Nischith N ( Radiance Beauty Bar )",
+    image: nischith,
+    review:
+      "Postscript Pixels has been amazing in helping me grow my cosmetics distribution business. They created such unique and engaging campaigns that highlighted the premium brands we work with, like Cetaphil and Colorbar. Their strategy brought in more inquiries from retailers and boosted our visibility online. I’m really impressed with how they understood the market and delivered results. Great experience working with them!",
+  },
+  {
+    name: "Bindu Ganesh (Dhanu Creations)",
+    image: bindu,
+    review:
+      "Praveen and team did such a fabulous job for our saree brand! Their ad ideas were so creative, and they really understood how to showcase our collections beautifully. Thanks to them, more people have started noticing us, and we’ve seen a big jump in sales. Very happy with their work!",
+  },
+  {
+    name: "Indira H (Kreative Kitchens – Modular Kitchen Design Studio)",
+    image: indira,
+    review:
+      "We are so impressed with the team at Postscript Pixels! They made such lovely campaigns for our modular kitchen business and handled the social media ads perfectly. We started getting more inquiries within just a few months. They’re very easy to work with and full of ideas. Totally worth it.",
   },
 ];

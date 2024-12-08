@@ -18,6 +18,9 @@ import Model from "@/app/components/Model";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import award1 from "@/images/awards/award1.png";
+import award2 from "@/images/awards/award2.png";
+
 import "./page.scss";
 import { Fragment } from "react";
 
@@ -46,7 +49,7 @@ const LandingPage = () => {
     <div className="main">
       <div className="landing-page-main">
         <Slider {...settings} className="custom-slider">
-          {clientsSlider.map((videoData, idx) => {
+          {sliderItems.map((videoData, idx) => {
             return (
               <div
                 className="slide-item"
@@ -84,23 +87,6 @@ const LandingPage = () => {
             collaboration, we’re your partner in shaping unforgettable
             narratives. Let’s make your story live on.
           </div>
-        </div>
-        <div className="client-section">
-          <div className="client-header">Our Clients</div>
-          <Slider {...clientsSettings} className="client-slider">
-            {clientsSlider.map((clientData, idx) => {
-              return (
-                <div className="client-slide-item" key={idx}>
-                  <Image
-                    src={clientData.imageUrl}
-                    alt={clientData.client}
-                    height={200}
-                    width={200}
-                  />
-                </div>
-              );
-            })}
-          </Slider>
         </div>
         <div className="works-one">
           <div className="works-one-left">
@@ -166,6 +152,151 @@ const LandingPage = () => {
               </Fragment>
             );
           })}
+        </div>
+        <div className="show-case">
+          Every brand has a unique story to tell, and we’re here to bring it to
+          life. Through innovative ideas and thoughtful execution, we transform
+          concepts into experiences that leave a mark.
+        </div>
+        <div className="mario-videos">
+          <div className="mario-videos-sub">
+            <video
+              style={{ width: "50vw" }}
+              width="auto"
+              height="auto"
+              autoPlay
+              muted
+              loop
+              onClick={() =>
+                setIframeData({
+                  iframeUrl: "https://www.youtube.com/embed/TPbyrTAW3hc",
+                  header: "Mario",
+                })
+              }
+            >
+              <source
+                src="https://storage.googleapis.com/praveen_shivanna/Resilia%20Bed%20Ad%20Web%20.mp4 "
+                type="video/mp4"
+              />
+            </video>
+            <video
+              style={{ width: "50vw" }}
+              width="auto"
+              height="auto"
+              autoPlay
+              muted
+              loop
+              onClick={() =>
+                setIframeData({
+                  iframeUrl: "https://www.youtube.com/embed/-x8GMVJfjSU",
+                  header: "Mario",
+                })
+              }
+            >
+              <source
+                src="https://storage.googleapis.com/praveen_shivanna/Barbeque%20Nation%20Web.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div className="mario-videos-sub">
+            <video
+              style={{ width: "50vw" }}
+              width="auto"
+              height="auto"
+              autoPlay
+              muted
+              loop
+              onClick={() =>
+                setIframeData({
+                  iframeUrl: "https://www.youtube.com/embed/_vxo4Ural8I",
+                  header: "Mario",
+                })
+              }
+            >
+              <source
+                src="https://storage.googleapis.com/praveen_shivanna/Kurl-on.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video
+              style={{ width: "50vw" }}
+              width="auto"
+              height="auto"
+              autoPlay
+              muted
+              loop
+              onClick={() =>
+                setIframeData({
+                  iframeUrl: "https://www.youtube.com/embed/5UhDI24Mvow",
+                  header: "Mario",
+                })
+              }
+            >
+              <source
+                src="https://storage.googleapis.com/praveen_shivanna/Deep%20rooted.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+        <div className="award-list">
+          <div className="award">
+            <div className="awards">
+              <div>
+                WASHINGTON.D.C - 2022 <br />
+                Best Narrative Film Award
+                <br />
+                The Echo Short
+                <br />
+                Our Heritage Our Planet Film Week
+                <br />
+              </div>
+              <br />
+              <div className="awards">
+                BENGALURU - 2022 <br />
+                Best Short Film Award
+                <br />
+                The Echo Short
+                <br />
+                Our Earth Award
+                <br />
+              </div>
+            </div>
+
+            <div>
+              <Image src={award2} alt="award1" height={300} width={200} />
+            </div>
+          </div>
+          <div className="award">
+            <div>
+              BENGALURU - 2022 <br />
+              Best Film Editing Award
+              <br />
+              The AHK Short
+              <br />
+              BIFFS
+              <br />
+            </div>
+            <Image src={award1} alt="award1" height={300} width={200} />
+          </div>
+        </div>
+        <div className="client-section">
+          <div className="client-header">Our Clients</div>
+          <Slider {...clientsSettings} className="client-slider">
+            {clientsSlider.map((clientData, idx) => {
+              return (
+                <div className="client-slide-item" key={idx}>
+                  <Image
+                    src={clientData.imageUrl}
+                    alt={clientData.client}
+                    height={200}
+                    width={200}
+                  />
+                </div>
+              );
+            })}
+          </Slider>
         </div>
       </div>
       {iframeData && (

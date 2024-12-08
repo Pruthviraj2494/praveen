@@ -111,13 +111,12 @@
   }
 
   .client-section {
-    padding: 18rem 0px 8rem 0px;
+    padding: 4rem 0px 8rem 0px;
     .client-slider {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 114px 0px 32px 0px;
-
       .slide-item {
         position: relative;
       }
@@ -148,6 +147,35 @@
       padding: 0px 32px 18px 32px;
       font-size: 48px;
       font-size: 800;
+    }
+  }
+  .show-case {
+    padding: 4em 1em;
+    text-align: center;
+    font-size: 32px;
+  }
+  .mario-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    .mario-videos-sub {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+  .award-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px;
+    gap: 18px;
+    .award {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
     }
   }
 }
