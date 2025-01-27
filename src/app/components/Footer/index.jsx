@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 
 import "./styles.scss";
 
@@ -7,9 +8,25 @@ import appLogo from "@/images/applogo.png";
 import whatsApp from "@/images/whatsapp.svg";
 import gmail from "@/images/gmail.svg";
 
-const isMobile = Window.innerWidth <= 678;
-
 const Footer = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 678);
+    };
+
+    // Set the initial value
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="footer-main">
       <div className="social-links">

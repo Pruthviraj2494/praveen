@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import Slider from "react-slick";
 
 import {
@@ -20,10 +21,27 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./page.scss";
 import { Fragment } from "react";
-const isMobile = Window.innerWidth <= 678;
 
 const LandingPage = () => {
   const [iframeData, setIframeData] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 678);
+    };
+
+    // Set the initial value
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const settings = {
     dots: true,
