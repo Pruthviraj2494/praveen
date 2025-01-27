@@ -170,3 +170,160 @@
     }
   }
 }
+
+@media (max-width: 678px) {
+  .main {
+    overflow-y: auto;
+    overflow-x: hidden;
+    .landing-page-main {
+      .custom-slider {
+        .slick-track {
+          height: 24vh !important;
+        }
+        .slide-item {
+          cursor: pointer;
+          .video-desc {
+            .video-dec-head {
+              font-size: 18px;
+            }
+            .video-dec-foot {
+              font-size: 32px;
+            }
+          }
+        }
+        .slick-next {
+          right: 25px;
+          z-index: 2;
+          top: 48%;
+        }
+        .slick-prev {
+          left: 25px;
+          z-index: 2;
+          top: 38%;
+          rotate: 180deg;
+        }
+        .slick-dots {
+          bottom: 12px;
+        }
+        .slick-next:before {
+          content: url("../images/arrow.svg");
+        }
+        .slick-prev:before {
+          content: url("../images/arrow.svg");
+        }
+      }
+      .landing-page-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        padding: 32px 0px;
+        .desc {
+          width: 100%;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+      .works-one {
+        display: flex;
+        .works-one-left {
+          width: 50vw;
+        }
+        .works-one-right {
+          width: 50vw;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+      }
+      .reels-header {
+        text-align: center;
+        padding: 18px 18px 0px 18px;
+        font-size: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        .reels-desc {
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+      .works-reels {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 8px;
+        flex-wrap: wrap;
+        gap: 1%;
+      }
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .client-section {
+      padding: 1rem 0px 2rem 0px;
+      height: 0vh;
+      .client-slider {
+        padding: 32px 0px 32px 0px;
+        .slide-item {
+          position: relative;
+        }
+        .slick-next {
+          right: 25px;
+          z-index: 2;
+        }
+        .slick-prev {
+          left: 25px;
+          z-index: 2;
+          top: 45%;
+          rotate: 180deg;
+        }
+        .slick-dots {
+          bottom: 12px;
+        }
+        .slick-next:before {
+          content: url("../images/arrow.svg");
+        }
+        .slick-prev:before {
+          content: url("../images/arrow.svg");
+        }
+        .slick-slide {
+          transform: translate(100%, 0);
+        }
+      }
+      .client-header {
+        padding: 0px 32px 18px 32px;
+        font-size: 32px;
+        text-align: center;
+        font-weight: 800;
+      }
+    }
+    .show-case {
+      padding: 2em 1em;
+      text-align: center;
+      font-size: 24px;
+    }
+    .mario-videos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+
+      .mario-videos-sub {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        overflow: hidden;
+      }
+    }
+  }
+}

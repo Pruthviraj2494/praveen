@@ -20,6 +20,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./page.scss";
 import { Fragment } from "react";
+const isMobile = Window.innerWidth <= 678;
 
 const LandingPage = () => {
   const [iframeData, setIframeData] = useState(null);
@@ -219,11 +220,19 @@ const LandingPage = () => {
             return (
               <Fragment key={idx}>
                 <video
-                  style={{
-                    width: "24%",
-                    paddingTop: "64px",
-                    cursor: "pointer",
-                  }}
+                  style={
+                    !isMobile
+                      ? {
+                          width: "24%",
+                          paddingTop: "64px",
+                          cursor: "pointer",
+                        }
+                      : {
+                          width: "24%",
+                          paddingTop: "12px",
+                          cursor: "pointer",
+                        }
+                  }
                   width="auto"
                   height="auto"
                   autoPlay
@@ -247,8 +256,8 @@ const LandingPage = () => {
                   <Image
                     src={clientData.imageUrl}
                     alt={clientData.client}
-                    height={200}
-                    width={200}
+                    height={isMobile ? 50 : 200}
+                    width={isMobile ? 50 : 200}
                   />
                 </div>
               );

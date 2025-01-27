@@ -27,3 +27,22 @@
     }
   }
 }
+
+@media (max-width: 678px) {
+  .nav-main {
+    .nav-left {
+      font-weight: 30;
+      font-size: 12px;
+      .applogo {
+        cursor: pointer;
+        height: 28px;
+        width: 28px;
+      }
+    }
+    .nav-right {
+      .right-nav-item {
+        cursor: pointer;
+      }
+    }
+  }
+}

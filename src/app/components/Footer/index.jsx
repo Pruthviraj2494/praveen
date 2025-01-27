@@ -7,6 +7,8 @@ import appLogo from "@/images/applogo.png";
 import whatsApp from "@/images/whatsapp.svg";
 import gmail from "@/images/gmail.svg";
 
+const isMobile = Window.innerWidth <= 678;
+
 const Footer = () => {
   return (
     <div className="footer-main">
@@ -26,14 +28,16 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-logo-container">
-        <Image src={appLogo} alt="appLogo" height={100} width={100} />
-        <div>
-          #319, 1st Main Rd, Bogadi 2nd stage North, Nirmithi Kendra, Mysuru
-          Karnataka - 570017
+      {!isMobile && (
+        <div className="footer-logo-container">
+          <Image src={appLogo} alt="appLogo" height={100} width={100} />
+          <div>
+            #319, 1st Main Rd, Bogadi 2nd stage North, Nirmithi Kendra, Mysuru
+            Karnataka - 570017
+          </div>
         </div>
-      </div>
-      <div className="social-links" style={{ alignItems: "flex-end" }}>
+      )}
+      <div className="social-links">
         <div className="social-links-header">Follow us</div>
         <div>
           <a href="https://www.instagram.com/postscript.pixels/">Instagram</a>

@@ -135,7 +135,7 @@ table {
 }
 
 body {
-  font-family: "EB Garamond", serif;
+  font-family: "Copernicus", serif;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -146,4 +146,6 @@ body::-webkit-scrollbar {
   --font-geist-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 1px;
+  --font-primary: "Copernicus", serif;
+  --font-secondary: "Metric", sans-serif;
 }

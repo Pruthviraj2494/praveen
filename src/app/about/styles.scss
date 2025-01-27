@@ -104,3 +104,100 @@ iframe {
   border: none;
   display: block;
 }
+
+@media (max-width: 678px) {
+  .about-main {
+    width: 100%;
+    .about {
+      gap: 12px;
+      // height: 100%;
+      width: 100%;
+      .about-left {
+        gap: 18px;
+        padding-left: 12px;
+        .header {
+          font-size: 18px;
+        }
+        .footer {
+          font-size: 12px;
+          width: 40vw;
+        }
+      }
+      .about-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        img {
+          object-fit: cover;
+          height: 70vh;
+          width: -webkit-fill-available;
+          margin-left: auto;
+        }
+      }
+    }
+    .review-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      padding: 32px 0px;
+      .review-main {
+        height: 30vh;
+        overflow: hidden;
+        width: 24vw;
+        color: #2b2929;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        padding: 18px;
+        .reviewer-img-container {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .hr-divider {
+          width: 100%;
+          border: 1px solid gray;
+        }
+        .client-image {
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+    .postscript-img-container {
+      height: 600px;
+      padding: 0px 6px 48px 0px;
+      .postscript-img {
+        width: 100vw;
+        object-fit: contain;
+        height: -webkit-fill-available;
+      }
+    }
+    .award-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      .award {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        cursor: pointer;
+        font-size: 24px;
+      }
+    }
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+}
